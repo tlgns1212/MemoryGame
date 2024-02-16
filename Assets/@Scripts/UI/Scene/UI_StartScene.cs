@@ -38,7 +38,10 @@ public class UI_StartScene : UI_Scene
         GetObject((int)GameObjects.ProgressBar).GetComponent<Slider>().value = 0;
         GetButton((int)Buttons.StartButton).gameObject.BindEvent(() =>
         {
-            print("Touched");
+            List<string> keys = new List<string>(Managers.Resource.ShowAll().Keys);
+            foreach(string key in keys){
+                print(key);
+            }
             GetButton((int)Buttons.StartButton).gameObject.SetActive(false);
             Managers.Scene.LoadScene(Define.Scene.GameScene, transform);
         });

@@ -1,0 +1,53 @@
+{
+    "stages":[
+        {
+            "level": 1,
+            "totalTime" : 30,
+            "score":1,
+            "verSize":2,
+            "horSize":2
+        },
+        {
+            "level": 2,
+            "totalTime" : 60,
+            "score":2,
+            "verSize":3,
+            "horSize":2
+        },
+        {
+            "level": 3,
+            "totalTime" : 90,
+            "score":3,
+            "verSize":4,
+            "horSize":4
+        },
+        {
+            "level": 4,
+            "totalTime" : 120,
+            "score":4,
+            "verSize":6,
+            "horSize":4
+        },
+        {
+            "level": 5,
+            "totalTime" : 150,
+            "score":5,
+            "verSize":6,
+            "horSize":6
+        },
+        {
+            "level": 6,
+            "totalTime" : 180,
+            "score":6,
+            "verSize":8,
+            "horSize":6
+        },
+        {
+            "level": 7,
+            "totalTime" : 210,
+            "score":7,
+            "verSize":8,
+            "horSize":8
+        }
+    ]
+}

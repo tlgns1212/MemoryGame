@@ -13,11 +13,13 @@ public interface ILoader<Key, Value>
 
 public class DataManager
 {
-    // public Dictionary<int, Data.CreatureData> CreatureDic { get; private set; } = new Dictionary<int, Data.CreatureData>();
+    public Dictionary<int, Data.StageData> StageDic { get; private set; } = new Dictionary<int, Data.StageData>();
+    public Dictionary<int, Data.CardData> CardDic { get; private set; } = new Dictionary<int, Data.CardData>();
 
     public void Init()
     {
-        // CreatureDic = LoadJson<Data.CreatureDataLoader, int, Data.CreatureData>("CreatureData").MakeDict();
+        StageDic = LoadJson<Data.StageDataLoader, int, Data.StageData>("StageData").MakeDict();
+        CardDic = LoadJson<Data.CardDataLoader, int, Data.CardData>("CardData").MakeDict();
     }
 
     Loader LoadJson<Loader, Key, Value>(string path) where Loader : ILoader<Key, Value>

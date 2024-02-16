@@ -11,6 +11,10 @@ public class ResourceManager
 {
     Dictionary<string, UnityEngine.Object> _resources = new Dictionary<string, UnityEngine.Object>();
 
+public Dictionary<string,UnityEngine.Object> ShowAll(){
+        return _resources;
+}
+
     public T Load<T>(string key) where T : Object
     {
         if (_resources.TryGetValue(key, out Object resource))

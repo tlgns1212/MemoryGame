@@ -8,6 +8,18 @@ public class Define
         GameScene,
     }
 
+    public enum CardType{
+        Clover = 1,
+        Diamond,
+        Club,
+        Heart
+    }
+    public enum CardBackType{
+        Red = 1,
+        Green,
+        Blue,
+    }
+
     public enum UIEvent
     {
         Click,

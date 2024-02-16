@@ -23,6 +23,36 @@ MonoBehaviour:
     m_SerializedLabels:
     - Preload
     FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: d8bf7821a50d0104bb07adc489a8a327
+    m_Address: playingCards.sprites
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Preload
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: dbeeb49f356a8fe46a1f1e4a8a236cf1
+    m_Address: playingCardBacks.sprites
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Preload
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 1f04dbf48fd342647a234bcf26796ee1
+    m_Address: UI_CardItem
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Preload
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 112fd2ec1f3cd13438b733872124062b
+    m_Address: StageData
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Preload
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: fd2ee0efd63e98d40b475130548e55bf
+    m_Address: CardData
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Preload
+    FlaggedDuringContentUpdateRestriction: 0
   m_ReadOnly: 0
   m_Settings: {fileID: 11400000, guid: 74c0a848c2daaa5469a60a6b3839c97a, type: 2}
   m_SchemaSet:

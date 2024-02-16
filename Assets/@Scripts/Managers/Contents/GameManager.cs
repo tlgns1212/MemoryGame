@@ -14,17 +14,46 @@ using UnityEngine.Networking;
 [Serializable]
 public class GameData
 {
-    public int UserLevel = 1;
+    public int level = 1;
+    public int totalScore = 0;
+    public int combo = 0;
+    public float time = 0;
 }
 public class GameManager
 {
     #region GameData
     public GameData _gameData = new GameData();
-    public int UserLevel
+    public int Level
     {
-        get { return _gameData.UserLevel; }
-        set { _gameData.UserLevel = value; }
+        get { return _gameData.level; }
+        set { _gameData.level = value; }
     }
+    public int TotalScore
+    {
+        get { return _gameData.totalScore; }
+        set 
+        { 
+            _gameData.totalScore = value;
+            OnResourcesChanged?.Invoke();
+        }
+    }
+    public int Combo
+    {
+        get { return _gameData.combo; }
+        set { _gameData.combo = value; }
+    }
+    public float Time
+    {
+        get { return _gameData.time; }
+        set { _gameData.time = value; }
+    }
+    private UI_GameScene _gameSceneUI;
+    public UI_GameScene GameSceneUI
+    {
+        get{ return _gameSceneUI; }
+        set{ _gameSceneUI = value; }
+    }
+
     // public int Ruby
     // {
     //     get { return _gameData.Ruby; }

@@ -6,39 +6,50 @@ using UnityEngine;
 namespace Data
 {
 
-    // #region  CreatureData
-    // public class CreatureData
-    // {
-    //     public int DataID;
-    //     public string DescriptionTextID;
-    //     public string PrefabLabel;
-    //     public float MaxHp;
-    //     public float MaxHpBonus;
-    //     public float Atk;
-    //     public float AtkBonus;
-    //     public float MoveSpeed;
-    //     public float MoveSpeedBonus;
-    //     public float AtkRate;
-    //     public float AtkRateBonus;
-    //     public float CriDamage;
-    //     public float CriDamageBonus;
-    //     public float CriRate;
-    //     public float CriRateBonus;
-    //     public string IconLabel;
-    // }
+    #region  StageData
+    public class StageData
+    {
+        public int level;
+        public int totalTime;
+        public int score;
+        public int verSize;
+        public int horSize;
+    }
 
-    // [Serializable]
-    // public class CreatureDataLoader : ILoader<int, CreatureData>
-    // {
-    //     public List<CreatureData> creatures = new List<CreatureData>();
-    //     public Dictionary<int, CreatureData> MakeDict()
-    //     {
-    //         Dictionary<int, CreatureData> dict = new Dictionary<int, CreatureData>();
-    //         foreach (CreatureData creature in creatures)
-    //             dict.Add(creature.DataID, creature);
-    //         return dict;
-    //     }
-    // }
-    // #endregion
+    [Serializable]
+    public class StageDataLoader : ILoader<int, StageData>
+    {
+        public List<StageData> stages = new List<StageData>();
+        public Dictionary<int, StageData> MakeDict()
+        {
+            Dictionary<int, StageData> dict = new Dictionary<int, StageData>();
+            foreach (StageData stage in stages)
+                dict.Add(stage.level, stage);
+            return dict;
+        }
+    }
+    #endregion
+
+    #region  CardData
+    public class CardData
+    {
+        public int id;
+        public string frontCard;
+        public string backCard;
+    }
+
+    [Serializable]
+    public class CardDataLoader : ILoader<int, CardData>
+    {
+        public List<CardData> cards = new List<CardData>();
+        public Dictionary<int, CardData> MakeDict()
+        {
+            Dictionary<int, CardData> dict = new Dictionary<int, CardData>();
+            foreach (CardData card in cards)
+                dict.Add(card.id, card);
+            return dict;
+        }
+    }
+    #endregion
 
 }
