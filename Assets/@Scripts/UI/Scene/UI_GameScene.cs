@@ -110,6 +110,7 @@ public class UI_GameScene : UI_Scene
         Managers.Game.HistoryDatas.Clear();
         Managers.Game.StartTime = Time.realtimeSinceStartup;
         Managers.Game.TotalScore = 0;
+        Managers.Game.Combo = 0;
         StartGame();
     }
     void OnClickBackButton()
@@ -132,6 +133,7 @@ public class UI_GameScene : UI_Scene
         Managers.Game.HistoryDatas.Clear();
         Managers.Game.StartTime = Time.realtimeSinceStartup;
         Managers.Game.TotalScore = 0;
+        Managers.Game.Combo = 0;
         StartGame();
     }
 
@@ -158,7 +160,7 @@ public class UI_GameScene : UI_Scene
     {
         gameSpaceItem.SetInfo(level);
         // Managers.Game.TotalScore = 0;
-        Managers.Game.Combo = 0;
+        // Managers.Game.Combo = 0;
         TimeSpan timeSpan = TimeSpan.FromSeconds(Managers.Game.Time);
         string formattedTime = string.Format("{0:D2}:{1:D2}", timeSpan.Minutes, timeSpan.Seconds);
         GetText((int)Texts.TimerText).text = formattedTime;

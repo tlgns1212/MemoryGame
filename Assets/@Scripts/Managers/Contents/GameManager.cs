@@ -87,10 +87,11 @@ public class GameManager
     #endregion
 
     #region Option
+    public bool _effectSoundOn = true;
     public bool EffectSoundOn
     {
-        get { return EffectSoundOn; }
-        set { EffectSoundOn = value; }
+        get { return _effectSoundOn; }
+        set { _effectSoundOn = value; }
     }
 
     public bool BGMOn

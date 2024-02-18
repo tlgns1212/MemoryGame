@@ -12,29 +12,11 @@ public class SceneManagerEx
         switch (CurrentScene.SceneType)
         {
             case Define.Scene.TitleScene:
-                // SceneChangeAnimation_In anim1 = Managers.Resource.Instantiate("SceneChangeAnimation_In").GetOrAddComponent<SceneChangeAnimation_In>();
-                // anim1.transform.SetParent(parents);
 
                 Time.timeScale = 1;
                 CoroutineManager.StartCoroutine(LoadSceneAsync(GetSceneName(type)));
-                // anim1.SetInfo(type, () =>
-                // {
-                //     // Managers.Resource.Destroy(Managers.UI.SceneUI.gameObject);
-                //     Managers.Clear();
-                //     SceneManager.LoadScene(GetSceneName(type));
-                // });
                 break;
             case Define.Scene.GameScene:
-                // SceneChangeAnimation_In anim2 = Managers.Resource.Instantiate("SceneChangeAnimation_In").GetOrAddComponent<SceneChangeAnimation_In>();
-                // anim2.transform.SetParent(parents);
-
-                Time.timeScale = 1;
-                CoroutineManager.StartCoroutine(LoadSceneAsync(GetSceneName(type)));
-                break;
-            case Define.Scene.LobbyScene:
-                // SceneChangeAnimation_In anim3 = Managers.Resource.Instantiate("SceneChangeAnimation_In").GetOrAddComponent<SceneChangeAnimation_In>();
-                // anim3.transform.SetParent(parents);
-
                 Time.timeScale = 1;
                 CoroutineManager.StartCoroutine(LoadSceneAsync(GetSceneName(type)));
                 break;

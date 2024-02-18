@@ -77,18 +77,21 @@ public class UI_GameSpaceItem : UI_Base
             cardNums.Add(cardNum);
         }
         cardNums.Shuffle();
+        List<int> matchCardsNum = new List<int>();
+        for(int i = 0; i < totalSize / 2; i++){
+            matchCardsNum.Add(cardNums[i]);
+            matchCardsNum.Add(cardNums[i]);
+        }
+        matchCardsNum.Shuffle();
 
-        for (int i = 0; i < totalSize / 2; i++)
+        for (int i = 0; i < totalSize; i++)
         {
-            UI_CardItem card1 = Managers.UI.MakeSubItem<UI_CardItem>(transform);
-            UI_CardItem card2 = Managers.UI.MakeSubItem<UI_CardItem>(transform);
-            int cardNum = cardNums[i] % 13 + 1;
-            int cardType = cardNums[i] / 13 + 1;
+            UI_CardItem card1 = Managers.UI.MakeSubItem<UI_CardItem>(transform, pooling:true);
+            int cardNum = matchCardsNum[i] % 13 + 1;
+            int cardType = matchCardsNum[i] / 13 + 1;
 
-            card1.SetInfo(i * 2, 1, 0, cardType, cardNum, HandleCardFlippedAction);
-            card2.SetInfo(i * 2 + 1, 1, 0, cardType, cardNum, HandleCardFlippedAction);
+            card1.SetInfo(i, 1, 0, cardType, cardNum, HandleCardFlippedAction);
             cards.Add(card1);
-            cards.Add(card2);
         }
 
         gameObject.GetComponent<GridLayoutGroup>().constraintCount = _sData.verSize;
@@ -173,6 +176,7 @@ public class UI_GameSpaceItem : UI_Base
         TMPro.TMP_Text text = GetText((int)Texts.ComboText);
         text.text = string.Format("{0} Combo!", Combo);
         text.GetComponent<RectTransform>().anchoredPosition = Vector2.zero;
+        text.GetComponent<RectTransform>().localScale = Vector3.one;
         Sequence sequence = DOTween.Sequence();
         sequence.Append(text.transform.DOScale(1.5f, 0.5f))
         .Join(text.GetComponent<RectTransform>().DOAnchorPosY(200f, 0.5f))

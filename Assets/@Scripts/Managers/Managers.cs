@@ -9,12 +9,8 @@ public class Managers : MonoBehaviour
 
     #region Contents
     GameManager _game = new GameManager();
-    ObjectManager _object = new ObjectManager();
-    AdsManager _ads = new AdsManager();
 
     public static GameManager Game { get { return Instance?._game; } }
-    public static ObjectManager Object { get { return Instance?._object; } }
-    public static AdsManager Ads { get { return Instance?._ads; } }
 
     #endregion
 
@@ -61,7 +57,6 @@ public class Managers : MonoBehaviour
         Scene.Clear();
         UI.Clear();
         Pool.Clear();
-        Object.Clear();
     }
 
 }

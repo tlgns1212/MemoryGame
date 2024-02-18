@@ -78,7 +78,7 @@ public class UI_CardItem : UI_Base
     public IEnumerator RotateCard()
     {
         _isClickable = false;
-        // Managers.Sound.PlayFlipCard();
+        Managers.Sound.PlayFlipCard();
         if (_isFront)
         {
             for (float i = 0f; i <= 180f; i += 10f)
