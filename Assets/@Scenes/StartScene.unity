@@ -456,6 +456,10 @@ PrefabInstance:
       propertyPath: m_AnchorMax.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7140764105479614694, guid: 421927351fe78a14591eac6785a56c7b, type: 3}
+      propertyPath: m_RenderMode
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7300139095522339513, guid: 421927351fe78a14591eac6785a56c7b, type: 3}
       propertyPath: m_Name
       value: UI_StartScene

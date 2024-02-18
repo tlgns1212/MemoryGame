@@ -18,6 +18,14 @@ public class GameData
     public int totalScore = 0;
     public int combo = 0;
     public float time = 0;
+    public float startTime = 0;
+    public List<HistoryData> historyDatas = new List<HistoryData>();
+}
+[Serializable]
+public class HistoryData
+{
+    public float time;
+    public string description;
 }
 public class GameManager
 {
@@ -31,8 +39,8 @@ public class GameManager
     public int TotalScore
     {
         get { return _gameData.totalScore; }
-        set 
-        { 
+        set
+        {
             _gameData.totalScore = value;
             OnResourcesChanged?.Invoke();
         }
@@ -47,11 +55,20 @@ public class GameManager
         get { return _gameData.time; }
         set { _gameData.time = value; }
     }
+    public float StartTime
+    {
+        get { return _gameData.startTime; }
+        set { _gameData.startTime = value; }
+    }
+    public List<HistoryData> HistoryDatas
+    {
+        get { return _gameData.historyDatas; }
+    }
     private UI_GameScene _gameSceneUI;
     public UI_GameScene GameSceneUI
     {
-        get{ return _gameSceneUI; }
-        set{ _gameSceneUI = value; }
+        get { return _gameSceneUI; }
+        set { _gameSceneUI = value; }
     }
 
     // public int Ruby

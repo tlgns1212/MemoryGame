@@ -131,6 +131,12 @@ public class SoundManager
     {
         Play(Define.Sound.Effect, "PopupClose_Common");
     }
+
+    public void PlayFlipCard()
+    {
+        Play(Define.Sound.Effect, "page_flip");
+    }
+
     private void LoadAudioClip(string key, Action<AudioClip> callback)
     {
         AudioClip audioClip = null;
